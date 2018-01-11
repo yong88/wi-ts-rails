@@ -22,6 +22,15 @@ ActiveAdmin.register_page "Dashboard" do
     #       end
     #     end
     #   end
+    columns do
+      column do
+        panel "Phone Number" do
+          h1 style: "margin-center: 0px; text-align: center;" do
+          span number_to_phone(325135268, pattern: /(\d{0,2})(\d{3,4})(\d{4})$/, area_code: true)
+          end
+        end
+      end
+    end
 
     #   column do
     #     panel "Info" do
